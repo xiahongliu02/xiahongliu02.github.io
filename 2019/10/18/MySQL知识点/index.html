@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Meng</title>
+  <title>MySQL知识点 | Meng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Meng">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="Mysql数据库知识点1.管理数据库语句：使用数据库： use test; 添加数据库： create database 数据库名; create database test; 修改数据库： alter database 数据库名; alter database test; 删除数据库： drop database 数据库名; drop database test; 查看所有数据库： show d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL知识点">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;18&#x2F;MySQL%E7%9F%A5%E8%AF%86%E7%82%B9&#x2F;index.html">
 <meta property="og:site_name" content="Meng">
+<meta property="og:description" content="Mysql数据库知识点1.管理数据库语句：使用数据库： use test; 添加数据库： create database 数据库名; create database test; 修改数据库： alter database 数据库名; alter database test; 删除数据库： drop database 数据库名; drop database test; 查看所有数据库： show d">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-18T06:58:17.699Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Meng" type="application/atom+xml">
@@ -149,76 +152,290 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-MySQL知识点" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MySQL知识点
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/18/MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+
+        
+        <a href="/2019/10/18/MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
   	<time datetime="2019-10-18T06:57:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/18/MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/">MySQL知识点</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mysql数据库知识点"><a href="#Mysql数据库知识点" class="headerlink" title="Mysql数据库知识点"></a>Mysql数据库知识点</h1><h2 id="1-管理数据库语句："><a href="#1-管理数据库语句：" class="headerlink" title="1.管理数据库语句："></a>1.管理数据库语句：</h2><p><strong>使用数据库：</strong></p>
+<p>use test;</p>
+<p><strong>添加数据库：</strong></p>
+<p>create database 数据库名;</p>
+<p>create database test;</p>
+<p><strong>修改数据库：</strong></p>
+<p>alter database 数据库名;</p>
+<p>alter database test;</p>
+<p><strong>删除数据库：</strong></p>
+<p>drop database 数据库名;</p>
+<p>drop database test;</p>
+<p><strong>查看所有数据库：</strong></p>
+<p>show databases;</p>
+<h2 id="2-管理表语句："><a href="#2-管理表语句：" class="headerlink" title="2.管理表语句："></a><strong>2.管理表语句：</strong></h2><p><strong>添加数据表：</strong></p>
+<p>create table 表名(</p>
+<p>　　列名 数据类型 数据约束,</p>
+<p>　　列名 数据类型 数据约束</p>
+<p>);</p>
+<p>create table student(</p>
+<p>　　name varchar(20) not null,</p>
+<p>　　age int(4)</p>
+<p>)</p>
+<p><strong>修改数据表：</strong></p>
+<p>alter table 表名;</p>
+<p>1)在表中增加新字段</p>
+<p>alter table student add colunm name varchar(20);</p>
+<p>2)删除表中的字段</p>
+<p>alter table student drop name;</p>
+<p>3)修改表中字段的类型</p>
+<p>alter table student modify name varchar(10);</p>
+<p><strong>删除数据表：</strong></p>
+<p>drop table 表名;</p>
+<p>drop table student;</p>
+<p><strong>查看所有表：</strong></p>
+<p>show tables;</p>
+<h2 id="3-管理数据语句："><a href="#3-管理数据语句：" class="headerlink" title="3.管理数据语句："></a>3.管理数据语句：</h2><p><strong>插入数据：</strong></p>
+<p>insert into 表名 (列1,列2…)  values (值1,值2…);</p>
+<p>insert into student (name,age) values (‘张三’,20);</p>
+<p><strong>更新数据：</strong></p>
+<p>update 表名 set 列=修改值 where 条件;</p>
+<p>update student set  name=’李四’ where name=’张三’;</p>
+<p><strong>删除数据：</strong></p>
+<p>delete from 表名 where 条件;</p>
+<p>delete from student where name=’李四’;</p>
+<p><strong>查询数据：</strong></p>
+<p>selete *  from 表名 where 条件;</p>
+<p>selete * from student where name=’张三’;</p>
+<h2 id="4-各种查询语句："><a href="#4-各种查询语句：" class="headerlink" title="4.各种查询语句："></a><strong>4.各种查询语句：</strong></h2><p><strong>查询时指定别名：</strong></p>
+<p>1) selete id AS ‘编号’,name AS ‘姓名’ from student;</p>
+<p>2) selete id ‘编号’,name ‘姓名’ from student;(AS可以省略)</p>
+<p><strong>查询时合并列：</strong></p>
+<p>需求:查询每个学生的总分</p>
+<p>selete name AS ‘姓名’,(servlet+mysql) AS ‘总成绩’ from student;</p>
+<p>注意:合并列的字段必须是数值类型的字段</p>
+<p><strong>查询时去除重复(distinct)：</strong></p>
+<p>需求:查询有哪些地区的学生</p>
+<p>selete DISTINCT address from student;</p>
+<p>另一种语法</p>
+<p>selete DISTINCT(address) from student;</p>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a><strong>条件查询</strong></h3><p><strong>逻辑条件: and  or</strong></p>
+<p>需求:查询学生的id为1，且姓名为张三的学生</p>
+<p>selete * from student where id=1 and name=’张三’;(交集)</p>
+<p>需求:查询学生的id为2，或姓名为张三的学生</p>
+<p>selete * from student where id=2 or name=’张三’;(并集)</p>
+<p><strong>比较条件: &gt;  &lt;  &gt;=  &lt;=  =  &lt;&gt;  (between and–在…之间 包前包后)</strong></p>
+<p>需求:查询servlet分数大于80分的学生</p>
+<p>selete * from student where servlet&gt;80;</p>
+<p>需求:查询mysql分数小于或等于85分的学生</p>
+<p>selete * from student where mysql&lt;=85;</p>
+<p>需求:查询servlet分数大于或等于80分，且小于或等于85分的学生</p>
+<p>selete * from student where servlet&gt;=80 AND servlet&lt;=85;</p>
+<p>代替上面语句的语法</p>
+<p>selete * from student where servlet BETWEEN 80 AND 85;</p>
+<p>需求:查询年龄不等于30的学生</p>
+<p>selete * from student where age&lt;&gt;30;</p>
+<p><strong>判空条件: is null,   is not null,   =**</strong>’’<strong>,   &lt;&gt;</strong>’’**</p>
+<p>Null:表示没有数据</p>
+<p>空字符:表示有数据</p>
+<p>需求:查询没有性别数据的学生(数据‘男’或‘女’)</p>
+<p>selete* from student where gender IS NULL OR gender=’’;</p>
+<p>需求:查询有性别数据的学生</p>
+<p>selete * from student where gender IS NOT NULL AND gender&lt;&gt;’’;</p>
+<p><strong>模糊条件: like</strong></p>
+<p>模糊替代符号:</p>
+<p>%:替代任意个字符</p>
+<p>_:替代一个字符</p>
+<p>需求:查询姓“李”的学生</p>
+<p>SELECT * FROM student WHERE NAME LIKE ‘李%’;</p>
+<p>需求:查询姓名中包含‘四’字的学生</p>
+<p>SELECT * FROM student WHERE NAME LIKE ‘%四%’;</p>
+<p>需求:查询姓‘李’，全名只有两个字的学生</p>
+<p>SELECT * FROM student WHERE NAME LIKE ‘李_’;</p>
+<p><strong>聚合函数查询(用于统计结果)</strong></p>
+<p>Max()取最大值  min()取最小值  avg()取平均值  count()统计标的记录数量 sum()求和</p>
+<p>需求:查询servlet的最高分</p>
+<p>SELECT MAX(servlet) FROM student;</p>
+<p>需求:查询mysql的最低分</p>
+<p>SELECT MIN(mysql) FROM student;</p>
+<p>需求:查询servlet的平均分</p>
+<p>SELECT AVG(servlet) FROM student;</p>
+<p>需求:查询当前有几个学生</p>
+<p>SELECT COUNT(*) FROM student;</p>
+<p>需求:查询servlet成绩的总和</p>
+<p>SELETE SUM(servlet) from student;</p>
+<p><strong>分页查询(limit)</strong></p>
+<p>Limit起始行数，查询的行数</p>
+<p>起始行数从0开始</p>
+<p>需求:查询第1,2条数据</p>
+<p>SELECT * FROM student LIMIT 0,2;</p>
+<p>分页查询需知道:当前页码，每页显示条数</p>
+<p>结论分页查询当前页数据:select * from student limit (当前页码-1)*每页显示条数，每页显示条数;</p>
+<p>需求:学生共20条数据，每页显示5条，共4页</p>
+<p>查询第3页(第11到15条)的学生数据:select * from student limit 10,5;</p>
+<p><strong>查询后排序(order by)</strong></p>
+<p>DESC:降序。数值从大到小，字母z-a</p>
+<p>ASC:升序。数值从小到大，字母a-z</p>
+<p>默认情况下，按照插入的顺序排序</p>
+<p>需求:按照id的升序排序</p>
+<p>select * from student order by id asc;</p>
+<p>需求:按照servlet成绩降序排序</p>
+<p>select * from student order by servlet desc;</p>
+<p>多个排序条件的情况:先按照前面的条件排序，当出现重复记录，再按照后面的条件排序</p>
+<p>需求:按照age升序，再按照servlet成绩升序排序</p>
+<p>select * from student order by age asc,servlet asc;</p>
+<p><strong>分组查询(group by)</strong></p>
+<p>需求:查询每个地区有多少人</p>
+<p>SELECT address,COUNT(*) FROM student GROUP BY address;</p>
+<p>需求:统计男女的人数</p>
+<p>注意:where条件必须放在group by 分组之前</p>
+<p>SELECT gender,COUNT(*) FROM student WHERE gender IS NOT NULL AND gender&lt;&gt;’’ GROUP BY gender;</p>
+<p><strong>分组后筛选(having)</strong></p>
+<p>需求:查询哪些地区的人数是大于2个的地区</p>
+<p>查询哪些地区多少人 2)筛选人数大于2的地区</p>
+<p>注意:having使用在group by分组之后，对分组后的条件进行筛选</p>
+<p>SELECT address,COUNT(<em>) FROM student GROUP BY address HAVING COUNT(</em>)&gt;2;</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/18/MySQL%E7%9F%A5%E8%AF%86%E7%82%B9/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/18/JAVA%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2019-10-18T06:56:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/18/JAVA%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVA知识点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/18/JAVA%E7%9F%A5%E8%AF%86%E7%82%B9/">JAVA知识点</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -241,8 +458,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
